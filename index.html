@@ -34,6 +34,20 @@
                     <label>Teléfono / WhatsApp</label>
                     <input type="tel" id="teacher-phone" placeholder="+52 ..." required>
                 </div>
+                <div class="input-group">
+                    <label>Universidad / Institución</label>
+                    <select id="teacher-school" required>
+                        <option value="">Selecciona tu escuela...</option>
+                        <option value="URN">URN</option>
+                        <option value="UTT">UTT</option>
+                        <option value="UTH">UTH</option>
+                        <option value="UTN">UTN</option>
+                        <option value="ITLM">ITLM</option>
+                        <option value="ITESCA">ITESCA</option>
+                        <option value="UNIVAFU">UNIVAFU</option>
+                        <option value="ULSA NW">ULSA NW</option>
+                    </select>
+                </div>
                 
                 <button type="submit" class="btn-primary">Comenzar Onboarding ✦</button>
             </form>
@@ -48,7 +62,7 @@
                     <span class="user-avatar">PT</span>
                     <div>
                         <h2 id="display-name">Pro Teacher</h2>
-                        <p>Richmond Pro Solution</p>
+                        <p id="display-school">Richmond Pro Solution</p>
                     </div>
                 </div>
                 <a href="https://wa.me/message/6O4USI5SGF3IA1" target="_blank" class="btn-whatsapp">

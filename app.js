@@ -7,6 +7,7 @@ const App = {
         name: '',
         email: '',
         phone: '',
+        school: '',
         currentView: 'welcome',
         currentTab: 'news'
     },
@@ -49,13 +50,20 @@ const App = {
         this.state.name = document.getElementById('teacher-name').value;
         this.state.email = document.getElementById('teacher-email').value;
         this.state.phone = document.getElementById('teacher-phone').value;
+        this.state.school = document.getElementById('teacher-school').value;
 
         // Persist locally
         localStorage.setItem('propass_teacher', JSON.stringify(this.state));
 
         // Update UI
-        this.displayName.innerText = this.state.name;
+        this.updateDashboardUI();
         this.showView('dashboard');
+    },
+
+    updateDashboardUI() {
+        this.displayName.innerText = this.state.name;
+        const displaySchool = document.getElementById('display-school');
+        if (displaySchool) displaySchool.innerText = `Richmond Pro — ${this.state.school}`;
     },
 
     showView(viewId) {
@@ -84,7 +92,7 @@ const App = {
             
             // Auto-fill or skip to dashboard if name exists
             if (this.state.name) {
-                this.displayName.innerText = this.state.name;
+                this.updateDashboardUI();
                 this.showView('dashboard');
             }
         }
