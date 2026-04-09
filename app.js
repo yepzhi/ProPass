@@ -42,13 +42,17 @@ const App = {
         'default': {
             title: 'Información Richmond Pro ✦',
             content: `
+                <div class="ki-card highlight">
+                    <h4>Diagnostic Test (Uso Ilimitado)</h4>
+                    <p>Solicita a tu Coordinador o Rep Richmond tokens <strong>gratuitos e ilimitados</strong> del <em>Diagnostic Test</em> para evaluar el nivel de tus alumnos en cualquier momento.</p>
+                </div>
                 <div class="ki-card">
                     <h4>Soporte a la Implementación</h4>
                     <p>Tu institución cuenta con el respaldo total de Richmond para la activación de licencias y capacitación docente.</p>
                 </div>
                 <div class="ki-card">
                     <h4>Certificación Docente</h4>
-                    <p>Consulta con tu coordinador las fechas de los próximos webinars de certificación para herramientas RLP v2.</p>
+                    <p>Consulta con tu coordinador las fechas de los próximos webinars de capacitación para herramientas RLP v2.</p>
                 </div>
             `
         }
