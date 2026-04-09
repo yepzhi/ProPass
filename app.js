@@ -8,7 +8,7 @@ const App = {
         email: '',
         phone: '',
         currentView: 'welcome',
-        currentTab: 'guide'
+        currentTab: 'news'
     },
 
     init() {
