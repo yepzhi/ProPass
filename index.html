@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPass — Onboarding Richmond Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mesh-bg"></div>
+    
+    <div id="onboarding-container">
+        <!-- Step 0: Welcome / Data Capture -->
+        <section id="view-welcome" class="card active">
+            <div class="logo-container">
+                <img src="https://richmondstudio.global/assets/images/logo.svg" alt="Richmond Logo" class="logo">
+            </div>
+            <h1>Bienvenido a <span class="highlight">Richmond Pro</span></h1>
+            <p class="subtitle">Comienza tu viaje como Pro Teacher. Por favor, ingresa tus datos para continuar.</p>
+            
+            <form id="welcome-form">
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="teacher-name" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="teacher-email" placeholder="nombre@universidad.edu" required>
+                </div>
+                <div class="input-group">
+                    <label>Teléfono / WhatsApp</label>
+                    <input type="tel" id="teacher-phone" placeholder="+52 ..." required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Comenzar Onboarding ✦</button>
+            </form>
+            
+            <p class="footer-note">Al continuar, aceptas integrarte a la comunidad Richmond Pro.</p>
+        </section>
+
+        <!-- Step 1: Dashboard / Main Guide -->
+        <section id="view-dashboard" class="card">
+            <header class="dash-header">
+                <div class="user-meta">
+                    <span class="user-avatar">PT</span>
+                    <div>
+                        <h2 id="display-name">Pro Teacher</h2>
+                        <p>Richmond Pro Solution</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/message/6O4USI5SGF3IA1" target="_blank" class="btn-whatsapp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+                    Duda rápida
+                </a>
+            </header>
+
+            <div class="dash-content">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="guide">Guía RLP</button>
+                    <button class="tab-btn" data-tab="materials">Materiales</button>
+                    <button class="tab-btn" data-tab="certification">Certificación</button>
+                    <button class="tab-btn" data-tab="faq">FAQ</button>
+                </div>
+
+                <!-- Tab: Guide RLP -->
+                <div class="tab-content active" id="tab-guide">
+                    <h3>Primer Paso: Acceso a Studio (RLP)</h3>
+                    <p>El primer paso para ser un Pro Teacher es obtener acceso a la plataforma <strong>Richmond Learning Platform (RLP)</strong>.</p>
+                    
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/KbtM9z0Rmhw?start=318" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <ul class="check-list">
+                        <li><strong>Dashboard Principal:</strong> Control de clases, tareas y administrador de exámenes.</li>
+                        <li><strong>Libros Digitales:</strong> Acceso offline/online desde cualquier dispositivo.</li>
+                        <li><strong>Material de Soporte:</strong> Listas de verbos, bancos de frases y actividades fotocopiables.</li>
+                    </ul>
+                </div>
+
+                <!-- Tab: Materials -->
+                <div class="tab-content" id="tab-materials">
+                    <h3>Tu Material Didáctico</h3>
+                    <p>Todo tu contenido depende de la serie que tu Universidad ha seleccionado:</p>
+                    
+                    <div class="grid-materials">
+                        <div class="m-card">
+                            <h4>Personal Best</h4>
+                            <p>6 niveles. Enfoque en progreso individual y recursos digitales extensos.</p>
+                            <a href="https://richmond.com.mx/" target="_blank" class="link-small">Ver detalles →</a>
+                        </div>
+                        <div class="m-card">
+                            <h4>English ID</h4>
+                            <p>Interactivo y acelerado. Diseñado para potenciar la identidad del alumno.</p>
+                            <a href="https://richmond.com.mx/" target="_blank" class="link-small">Ver detalles →</a>
+                        </div>
+                        <div class="m-card">
+                            <h4>atWork</h4>
+                            <p>Business English modular. Énfasis en empleabilidad inmediata.</p>
+                            <a href="https://richmond.com.mx/" target="_blank" class="link-small">Ver detalles →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Certification -->
+                <div class="tab-content" id="tab-certification">
+                    <h3>Flujo de Certificación TOEIC</h3>
+                    <div class="flow-step">
+                        <span class="step-num">1</span>
+                        <div>
+                            <h5>Preparación</h5>
+                            <p>Uso constante del material base (Personal Best / English ID) y RLP.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-num">2</span>
+                        <div>
+                            <h5>Assessment</h5>
+                            <p>Evaluaciones integradas que miden el avance real hacia la meta.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-num">3</span>
+                        <div>
+                            <h5>Certificación</h5>
+                            <p>Obtención de la certificación internacional TOEIC avalada por ETS.</p>
+                        </div>
+                    </div>
+                    <p class="info-note">Richmond Pro garantiza la empleabilidad mediante este ecosistema de validación.</p>
+                </div>
+
+                <!-- Tab: FAQ -->
+                <div class="tab-content" id="tab-faq">
+                    <h3>Preguntas Frecuentes</h3>
+                    <div class="faq-list">
+                        <details>
+                            <summary>¿Cómo me registro si soy profesor nuevo?</summary>
+                            <p>Debes recibir un código de activación por parte de tu coordinador. Con ese código, regístrate en richmondlp.com seleccionando el rol de 'Teacher'.</p>
+                        </details>
+                        <details>
+                            <summary>¿Dónde encuentro las guías del profesor?</summary>
+                            <p>Dentro de tu RLP, en la pestaña 'Resources', encontrarás Teacher's Books, audios y material fotocopiable.</p>
+                        </details>
+                        <details>
+                            <summary>¿Requisitos técnicos para RLP?</summary>
+                            <p>Navegador Chrome o Edge actualizado. Conexión estable. Las apps están disponibles para Windows, Mac, iOS y Android.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="dash-footer">
+                <p>Richmond Pro Ecosystem &copy; 2026</p>
+                <a href="https://richmondpro.global/" target="_blank">Explorar Solución Global</a>
+            </footer>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
