@@ -86,7 +86,7 @@ body {
 }
 
 .logo {
-    height: 32px;
+    height: 40px; /* Increased size slightly */
 }
 
 h1 {
@@ -173,10 +173,22 @@ input:focus {
     margin-bottom: 30px;
 }
 
+.brand-meta {
+    display: flex;
+    align-items: center;
+}
+
+.dash-logo {
+    height: 28px;
+}
+
 .user-meta {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-right: auto; /* Push WhatsApp button to the right */
+    padding-left: 20px;
+    border-left: 1px solid #f0f0f0;
 }
 
 .user-avatar {
