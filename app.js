@@ -70,6 +70,7 @@ const App = {
             dashboard: document.getElementById('view-dashboard')
         };
         this.form = document.getElementById('welcome-form');
+        this.btnSkip = document.getElementById('btn-skip');
         this.displayName = document.getElementById('display-name');
         
         this.tabs = document.querySelectorAll('.tab-btn');
@@ -82,6 +83,13 @@ const App = {
             e.preventDefault();
             this.handleOnboarding();
         });
+
+        // Skip/Demo button
+        if (this.btnSkip) {
+            this.btnSkip.addEventListener('click', () => {
+                this.handleDemoAccess();
+            });
+        }
 
         // Tab Switching
         this.tabs.forEach(btn => {
@@ -98,15 +106,28 @@ const App = {
         this.state.phone = document.getElementById('teacher-phone').value;
         this.state.school = document.getElementById('teacher-school').value;
 
-        // Persist locally
-        localStorage.setItem('propass_teacher', JSON.stringify(this.state));
+        this.transitionToDashboard();
+    },
 
-        // Update UI
-        this.updateDashboardUI();
+    handleDemoAccess() {
+        this.state.name = "Pro Guest";
+        this.state.email = "demo@richmond.pro";
+        this.state.school = "Richmond Academy";
+        this.transitionToDashboard();
+    },
+
+    transitionToDashboard() {
+        this.state.currentView = 'dashboard';
+        this.saveState();
+        this.updateUI();
         this.showView('dashboard');
     },
 
-    updateDashboardUI() {
+    saveState() {
+        localStorage.setItem('propass_teacher', JSON.stringify(this.state));
+    },
+
+    updateUI() {
         this.displayName.innerText = this.state.name;
         const displaySchool = document.getElementById('display-school');
         if (displaySchool) displaySchool.innerText = `Richmond Pro — ${this.state.school}`;
@@ -136,6 +157,7 @@ const App = {
             content.classList.toggle('active', content.id === `tab-${tabId}`);
         });
         this.state.currentTab = tabId;
+        this.saveState();
     },
 
     checkPersistence() {
@@ -146,8 +168,10 @@ const App = {
             
             // Auto-fill or skip to dashboard if name exists
             if (this.state.name) {
-                this.updateDashboardUI();
-                this.showView('dashboard');
+                this.updateUI();
+                if (this.state.currentView === 'dashboard') {
+                    this.showView('dashboard');
+                }
             }
         }
     }

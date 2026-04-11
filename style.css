@@ -583,3 +583,24 @@ details p {
     display: inline-block;
     margin-top: 5px;
 }
+
+.btn-skip-temp {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-skip-temp:hover {
+    background: rgba(0,0,0,0.03);
+    color: var(--text-main);
+    border-color: rgba(0,0,0,0.2);
+}
